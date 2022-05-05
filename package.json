@@ -1,15 +1,15 @@
 {
-  "name": "markdown-fenced-codeblock-example-injection",
-  "displayName": "Markdown fenced code block example injection",
-  "description": "",
-  "version": "0.0.1",
-  "publisher": "bierner",
+  "name": "pegjs-in-string",
+  "displayName": "Hightlight PEG.js in string",
+  "description": "Highlight syntax of pegjs/peggy in string, depend on Peggy Language extension.",
+  "version": "0.1.0",
+  "publisher": "H4M5TER",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/mjbvz/vscode-fenced-code-block-grammar-injection-example.git"
+    "url": "https://github.com/h4m5ter/vscode-pegjs-in-string.git"
   },
   "bugs": {
-    "url": "https://github.com/mjbvz/vscode-fenced-code-block-grammar-injection-example/issues"
+    "url": "https://github.com/h4m5ter/vscode-pegjs-in-string/issues"
   },
   "engines": {
     "vscode": "^1.8.0"
@@ -17,22 +17,26 @@
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "javascript",
+    "peggyjs",
+    "peggy",
+    "pegjs",
+    "highlight",
+    "embedded language"
+  ],
   "contributes": {
-    "languages": [
-      {
-        "id": "superjs-injection"
-      }
-    ],
     "grammars": [
       {
-        "language": "superjs-injection",
-        "scopeName": "markdown.superjs.codeblock",
-        "path": "./syntaxes/codeblock.json",
+        "scopeName": "pegjs.injection",
+        "path": "./syntaxes/injection.json",
         "injectTo": [
-          "text.html.markdown"
+          "source.ts",
+          "source.js.jsx",
+          "source.js"
         ],
         "embeddedLanguages": {
-          "meta.embedded.block.superjs": "javascript"
+          "meta.embedded.block.pegjs": "peggy"
         }
       }
     ]
